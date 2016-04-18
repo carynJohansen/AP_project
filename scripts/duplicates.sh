@@ -12,7 +12,7 @@ module purge
 source /home/ckj239/AppliedGenomics/Project/pipeline.conf
 
 cd $dataDIR
-
+ 
 srr="$(head -$PBS_ARRAYID $sampleInfo | tail -1 | awk '{print $1}')"
 
 echo "Sample Information"
