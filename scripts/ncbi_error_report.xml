@@ -1,0 +1,227 @@
+<Report>
+ <Run>
+  <Date>
+   <Start value="Fri Apr 8 2016 5:28:48 PM"/>
+   <End value="Fri Apr 8 2016 5:34:27 PM"/>
+  </Date>
+  <Home name="HOME" value="/home/ckj239"/>
+  <Cwd>/scratch/ckj239/AppliedGenomics/Project/data</Cwd>
+  <CommandLine argc="2">
+   <Arg index="0" value="fastq-dump"/>
+   <Arg index="1" value="SRR2931495.sra"/>
+  </CommandLine>
+  <Result rc="RC(rcXF,rcFunction,rcExecuting,rcBuffer,rcInsufficient)"/>
+  <User admin="false"/>
+ </Run>
+ <Configuration>
+  <Files count="2">
+   <File name="/share/apps/sratoolkit/sratoolkit.2.5.7-centos_linux64/bin/ncbi/default.kfg"/>
+   <File name="/share/apps/sratoolkit/sratoolkit.2.5.7-centos_linux64/bin/ncbi/vdb-copy.kfg"/>
+  </Files>
+  <refseq state="not found"/>
+  <krypto state="pwfile: not found"/>
+  <sra state="not found"/>
+  <Config>
+    <APPNAME>"fastq-dump"</APPNAME>
+    <APPPATH>"/scratch/ckj239/AppliedGenomics/Project/data/"</APPPATH>
+    <AWS></AWS>
+    <BUILD>"RELEASE"</BUILD>
+    <HOME>"/home/ckj239"</HOME>
+    <HOST></HOST>
+    <NCBI_HOME>"/home/ckj239/.ncbi"</NCBI_HOME>
+    <NCBI_SETTINGS>"/home/ckj239/.ncbi/user-settings.mkfg"</NCBI_SETTINGS>
+    <OS>"linux"</OS>
+    <PWD>"/scratch/ckj239/AppliedGenomics/Project/data"</PWD>
+    <USER>"ckj239"</USER>
+    <VDBCOPY>
+      <DO_NOT_REDACT>"CS_KEY,FLOW_CHARS,KEY_SEQUENCE,LINKER_SEQUENCE"</DO_NOT_REDACT>
+      <META>
+        <IGNORE>"col,.seq,STATS,BASE_COUNT,HUFFMAN_TREE_POS,HUFFMAN_TREE_POS_SIZE,HUFFMAN_TREE_PRB,HUFFMAN_TREE_PRB_SIZE,HUFFMAN_TREE_SIG,HUFFMAN_TREE_SIG_SIZE,MSC454_CLIP_QUALITY_LEFT,MSC454_CLIP_QUALITY_RIGHT,MSC454_FLOW_CHARS,MSC454_KEY_SEQUENCE,NREADS,NUMBER_POS_CHANNELS,NUMBER_PRB_CHANNELS_1,NUMBER_PRB_COLUMNS,NUMBER_SIG_CHANNELS,PLATFORM,READ_0,READ_1,SPOT_COUNT"</IGNORE>
+      </META>
+      <NCBI_SRA_ABI_tbl_v1_1>
+        <schema>"sra/abi.vschema"</schema>
+        <tab>"NCBI:SRA:ABI:tbl:v2"</tab>
+      </NCBI_SRA_ABI_tbl_v1_1>
+      <NCBI_SRA_Illumina_tbl_v0a_1>
+        <schema>"sra/illumina.vschema"</schema>
+        <tab>"NCBI:SRA:Illumina:tbl:phred:v2"</tab>
+      </NCBI_SRA_Illumina_tbl_v0a_1>
+      <NCBI_SRA__454__tbl_v0_1>
+        <schema>"sra/454.vschema"</schema>
+        <tab>"NCBI:SRA:_454_:tbl:v2"</tab>
+      </NCBI_SRA__454__tbl_v0_1>
+      <READ_FILTER_COL_NAME>"READ_FILTER"</READ_FILTER_COL_NAME>
+      <REDACTABLE_TYPES>"INSDC:color:text,INSDC:x2cs:bin,INSDC:2cs:bin,INSDC:2cs:packed,INSDC:dna:text,INSDC:4na:bin,INSDC:4na:packed,INSDC:x2na:bin,INSDC:2na:bin,INSDC:2na:packed,NCBI:SRA:pos16,INSDC:quality:phred,INSDC:quality:log_odds,NCBI:qual4,INSDC:position:one,INSDC:position:zero,NCBI:fsamp4,NCBI:isamp1"</REDACTABLE_TYPES>
+      <REDACTVALUE>
+        <INSDC_color_text>
+          <VALUE>"'.'"</VALUE>
+        </INSDC_color_text>
+        <INSDC_dna_text>
+          <VALUE>"'N'"</VALUE>
+        </INSDC_dna_text>
+        <NCBI_qual4>
+          <VALUE>"-6"</VALUE>
+        </NCBI_qual4>
+        <TYPES>"INSDC_color_text,INSDC_dna_text,NCBI_qual4"</TYPES>
+      </REDACTVALUE>
+      <SCORE>
+        <INSDC_2cs_bin>"2"</INSDC_2cs_bin>
+        <INSDC_2cs_packed>"2"</INSDC_2cs_packed>
+        <INSDC_2na_bin>"2"</INSDC_2na_bin>
+        <INSDC_2na_packed>"2"</INSDC_2na_packed>
+        <INSDC_SRA_read_type>"1"</INSDC_SRA_read_type>
+        <INSDC_quality_log_odds>"1"</INSDC_quality_log_odds>
+        <INSDC_quality_phred>"1"</INSDC_quality_phred>
+        <INSDC_x2cs_bin>"1"</INSDC_x2cs_bin>
+        <INSDC_x2na_bin>"1"</INSDC_x2na_bin>
+      </SCORE>
+      <_454_>
+        <schema>"sra/454.vschema"</schema>
+        <tab>"NCBI:SRA:_454_:tbl:v2"</tab>
+      </_454_>
+      <_ABSOLID_>
+        <schema>"sra/abi.vschema"</schema>
+        <tab>"NCBI:SRA:ABI:tbl:v2"</tab>
+      </_ABSOLID_>
+      <_ILLUMINA_>
+        <schema>"sra/illumina.vschema"</schema>
+        <tab>"NCBI:SRA:Illumina:tbl:phred:v2"</tab>
+      </_ILLUMINA_>
+    </VDBCOPY>
+    <VDB_CONFIG></VDB_CONFIG>
+    <VDB_ROOT></VDB_ROOT>
+    <config>
+      <default>"true"</default>
+    </config>
+    <kfg>
+      <arch>
+        <bits>"64"</bits>
+        <name>"compute-1-3.local"</name>
+      </arch>
+      <dir>"/share/apps/sratoolkit/sratoolkit.2.5.7-centos_linux64/bin/ncbi"</dir>
+      <name>"default.kfg"</name>
+    </kfg>
+    <repository>
+      <remote>
+        <aux>
+          <NCBI>
+            <apps>
+              <nakmer>
+                <volumes>
+                  <fuseNAKMER>"sadb"</fuseNAKMER>
+                </volumes>
+              </nakmer>
+              <nannot>
+                <volumes>
+                  <fuseNANNOT>"sadb"</fuseNANNOT>
+                </volumes>
+              </nannot>
+              <refseq>
+                <volumes>
+                  <refseq>"refseq"</refseq>
+                </volumes>
+              </refseq>
+              <sra>
+                <volumes>
+                  <fuse1000>"sra-instant/reads/ByRun/sra"</fuse1000>
+                </volumes>
+              </sra>
+              <wgs>
+                <volumes>
+                  <fuseWGS>"wgs"</fuseWGS>
+                </volumes>
+              </wgs>
+            </apps>
+            <root>"http://ftp-trace.ncbi.nlm.nih.gov/sra"</root>
+          </NCBI>
+        </aux>
+        <main>
+          <CGI>
+            <resolver-cgi>"http://www.ncbi.nlm.nih.gov/Traces/names/names.cgi"</resolver-cgi>
+          </CGI>
+        </main>
+        <protected>
+          <CGI>
+            <resolver-cgi>"http://www.ncbi.nlm.nih.gov/Traces/names/names.cgi"</resolver-cgi>
+          </CGI>
+        </protected>
+      </remote>
+      <user>
+        <main>
+          <public>
+            <apps>
+              <file>
+                <volumes>
+                  <flat>"files"</flat>
+                </volumes>
+              </file>
+              <nakmer>
+                <volumes>
+                  <nakmerFlat>"nannot"</nakmerFlat>
+                </volumes>
+              </nakmer>
+              <nannot>
+                <volumes>
+                  <nannotFlat>"nannot"</nannotFlat>
+                </volumes>
+              </nannot>
+              <refseq>
+                <volumes>
+                  <refseq>"refseq"</refseq>
+                </volumes>
+              </refseq>
+              <sra>
+                <volumes>
+                  <sraFlat>"sra"</sraFlat>
+                </volumes>
+              </sra>
+              <wgs>
+                <volumes>
+                  <wgsFlat>"wgs"</wgsFlat>
+                </volumes>
+              </wgs>
+            </apps>
+            <root>"/home/ckj239/ncbi/public"</root>
+          </public>
+        </main>
+      </user>
+    </repository>
+    <tools>
+      <ascp>
+        <max_rate>"1000m"</max_rate>
+      </ascp>
+    </tools>
+    <vdb>
+      <lib>
+        <paths>
+          <kfg>"/share/apps/sratoolkit/sratoolkit.2.5.7-centos_linux64/bin"</kfg>
+        </paths>
+      </lib>
+    </vdb>
+  </Config>
+  <RemoteAccess available="true"/>
+  <CurrentProtectedRepository found="false"/>
+ </Configuration>
+ <Object path="SRR2931495.sra" type="database" fs_type="archive" size="2726025948">
+  <Dependencies>
+   <List count="0" missing="0">
+   </List>
+  </Dependencies>
+ </Object>
+ <SOFTWARE>
+  <VDBLibrary vers="2.7.8"/>
+  <Build static="false">
+   <Error rc="RC(rcCont,rcNamelist,rcInserting,rcString,rcEmpty)" function="VDBManagerListExternalSchemaModules"/>
+  </Build>
+  <Tool date="Dec 21 2015" name="fastq-dump" vers="2.5.7">
+   <Binary path="/share/apps/sratoolkit/sratoolkit.2.5.7-centos_linux64/bin/fastq-dump" type="alias" md5="b8a9729b9fde6a7301467f7154dbdc40">
+    <Alias resolved="fastq-dump.2">
+     <Alias resolved="fastq-dump.2.5.7"/>
+    </Alias>
+   </Binary>
+  </Tool>
+ </SOFTWARE>
+ <Env>
+ </Env>
+</Report>
+

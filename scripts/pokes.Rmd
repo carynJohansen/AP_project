@@ -1,0 +1,26 @@
+---
+title: "Initial Pokes at Project"
+author: "Caryn Johansen"
+date: "April 1, 2016"
+output: html_document
+---
+
+```{r}
+setwd("~/Dropbox/NYU2/AppliedGenomics/Project")
+```
+
+```{r}
+deg <- read.table("042317-1.txt", header =T, sep=",", row.names = 1)
+
+#reshape to plot in ggplot
+vars <- names(deg)[-1]
+deg_long <- reshape(deg, direction="long", idvar="Condition_DE", varying = 2:9 , v.names="count")
+
+deg_drought_above5 <- as.data.frame(deg[deg$DROUGHT_UP >= 5, ])
+drought_up_above5_genes <- rownames(deg_drought_above5)
+
+drought_up_above5_genes[2:9]
+
+#["LOC_Os01g03330","LOC_Os01g03340","LOC_Os01g03750","LOC_Os01g04330"]
+
+```
