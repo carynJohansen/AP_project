@@ -7,6 +7,8 @@ module purge
 
 module load gatk/3.1-1
 
+source /home/ckj239/AppliedGenomics/Project/pipeline.conf
+
 # Identify regions to be realigned
 
 java -jar GenomeAnalysisTK.jar \
