@@ -14,9 +14,8 @@ srr="$(head -$PBS_ARRAYID $droughtInfo | tail -1 | awk '{print $1}')"
 alignDIR=$dataDIR/$srr\_alignment
 alignFile=$srr\Aligned.out.sam
 
-splitFile=$srr\_smRs.bam
-
-realignedFile=$srr\_smR.bam
+splitFile=$srr\_sms.bam
+realignedFile=$srr\_smsR.bam
 
 echo "Sample Information"
 echo "========================"

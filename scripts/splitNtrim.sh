@@ -19,8 +19,8 @@ alignDIR=$dataDIR/$srr\_alignment
 alignFile=$srr\Aligned.out.sam
 sortedFile=$srr\_s.bam
 dupFile=$srr\_sm.bam
-realignedFile=$srr\_smR.bam
-splitFile=$srr\_smRs.bam
+splitFile=$srr\_sms.bam
+realignedFile=$srr\_smsR.bam
 
 echo "Sample Information"
 echo "========================"
@@ -35,8 +35,12 @@ echo "reference genome:" $reference
 echo "GFF file:" $gff
 echo "========================"
 
-module purge
-module load gatk
+module load gatk/3.1-1
+
+echo "gatk module loaded: gatk/3.1-1"
+
+echo "Input bam:" $splitFile
+echo "Output bam:" $realignedFile
 
 # this finds splicing junctions, splits the reads which overlap sjs
 # realigns the split read to flanking exon regions before removing any part of 
@@ -45,7 +49,7 @@ module load gatk
 java -jar GenomeAnalysisTK.jar \
 -T SplitNCigarReads \
 -R $reference \
--I $realignedFile \
+-I $dupFile \
 -o $splitFile \
 -U ALLOW_N_CIGARS \
 -rf ReassignOneMappingQuality \
