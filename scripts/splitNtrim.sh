@@ -58,5 +58,3 @@ java -jar GenomeAnalysisTK.jar \
 __ERR__=$?
 
 echo "SplitNCigarReads error:" $__ERR__
-
-

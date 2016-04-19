@@ -1,6 +1,6 @@
 #!/bin/bash
 #PBS -l mem=12GB,nodes=1:ppn=12,walltime=1:00:00
-#PBS -N splitNtrim
+#PBS -N realign_indels
 #PBS -M ckj239@nyu.edu
 #PBS -j oe
 #PBS -t 1-16
