@@ -5,7 +5,7 @@
 #PBS -N mark_duplicates 
 #PBS -M ckj239@nyu.edu
 #PBS -j oe
-#PBS -t 1-9
+#PBS -t 2-16
 
 module purge
 
@@ -37,7 +37,7 @@ echo "$(samtools --version)"
 samDIR=$dataDIR/$srr\_alignment
 alignFile=$srr\Aligned.out.sam #I THINK, not sure
 sortedFile=$srr\_s.bam
-dedupFile=$srr\_sm.bam
+dupFile=$srr\_sm.bam
 
 cd $samDIR
 
@@ -47,17 +47,10 @@ echo "Alignment Directory:"  $samDIR
 echo "Current Directory:" $PWD
 echo "Alignment File:" $alignFile
 echo "Sorted Alignment File:" $sortedFile
-echo "Duplicates Marked Alignment File:" $dedupFile
-
-#sort and index sams
-
-samtools index $samDIR/$alignFile
-
-__ERR__=$?
-echo "samtools index error:" $__ERR__
+echo "Duplicates Marked Alignment File:" $dupFile	
 
 #convert sam to bam
-java -jar /share/apps/picard-tools/1.88/SortSam.jar \
+java -Xmx2g -jar /share/apps/picard-tools/1.88/SortSam.jar \
 INPUT=$alignFile \
 OUTPUT=$sortedFile \
 SORT_ORDER=coordinate
@@ -68,17 +61,17 @@ echo "picard SortSam error:" $__ERR__
 #mark duplicates in bam
 #do we want to remove duplicates? let's count first and see how prevelent they are... Also check the paper.
 
-java -jar /share/apps/picard-tools/1.88/MarkDuplicates.jar \
+java -Xmx2g -jar /share/apps/picard-tools/1.88/MarkDuplicates.jar \
 INPUT=$sortedFile \
-OUTPUT=$dedupFile \
-METRICS_FILE=metrics.txt
-
+OUTPUT=$dupFile \
+METRICS_FILE=metrics.txt \
+MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=1000
 __ERR__=$?
 echo "picard-tools MarkDuplicate error:" $__ERR__
 
 #build a bam index
-java -jar /share/apps/picard-tools/1.88/BuildBamIndex.jar \
-INPUT=$dedupFile
+java -Xmx2g -jar /share/apps/picard-tools/1.88/BuildBamIndex.jar \
+INPUT=$dupFile
 
 __ERR__=$?
 echo "picard BuildBamIndex error:" $__ERR__
